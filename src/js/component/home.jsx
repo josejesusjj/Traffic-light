@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Lights from "./lights.jsx";
-import Click from "./click.jsx";
+import TrafficLight from "./trafficLight.jsx";
 
 //my components
 const Home = () => {
 	return (
 		<div>
 			<Lights />
-			<Click />
+			<TrafficLight />
 		</div>
 	);
 };

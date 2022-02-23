@@ -2,39 +2,39 @@ import React, { useState } from "react";
 
 const Lights = () => {
 	const [addLight, setAddLight] = useState("");
-	const [selectedColor, setSelectedColor] = useState("green");
+	const [lightOn, setLightOn] = useState("green");
 
 	return (
 		<div className="environment">
 			<div className="trafficbar"></div>
 			<div className="trafficlight">
-				<div
-					onClick={() => setSelectedColor("red")}
+				<span
+					onClick={() => setlightOn("red")}
 					className={
-						"light red" + (selectedColor == "red" ? " glow" : "")
-					}></div>
-				<div
-					onClick={() => setSelectedColor("yellow")}
+						"light red" + (lightOn == "red" ? " glow" : "")
+					}></span>
+				<span
+					onClick={() => setLightOn("yellow")}
 					className={
 						"light yellow" +
-						(selectedColor == "yellow" ? " glow" : "")
-					}></div>
-				<div
-					onClick={() => setSelectedColor("green")}
+						(lightOn == "yellow" ? " glow" : "")
+					}></span>
+				<span
+					onClick={() => setLightOn("green")}
 					className={
 						"light green" +
-						(selectedColor == "green" ? " glow" : "")
-					}></div>
-				<div
+						(lightOn == "green" ? " glow" : "")
+					}></span>
+				<span
 					className={addLight}
-					onClick={() => setSelectedColor("purple")}></div>
+					onClick={() => setLightOn("purple")}></span>
 			</div>
 			<div>
 				<button
 					onClick={() =>
 						setAddLight(
 							"light purple" +
-								(selectedColor == "purple" ? " glow" : "")
+								(lightOn == "purple" ? " glow" : "")
 						)
 					}>
 					want a light extra?

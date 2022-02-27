@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
 const Lights = () => {
+	const [lightOn, setLightOn] = useState("");
 	const [addLight, setAddLight] = useState("");
-	const [lightOn, setLightOn] = useState("red");
 
 	return (
 		<div className="environment">
-			<div></div>
 			<div className="trafficbar"></div>
 			<div className="trafficlight">
 				<div
@@ -25,17 +24,16 @@ const Lights = () => {
 						"light green" + (lightOn == "green" ? " glow" : "")
 					}></div>
 				<div
-					className={addLight}
+					className={
+						addLight +
+						" purple" +
+						(lightOn == "purple" ? " glow" : "")
+					}
 					onClick={() => setLightOn("purple")}></div>
 			</div>
 			<br></br>
 			<br></br>
-			<button
-				onClick={() =>
-					setAddLight(
-						"light purple" + (lightOn == "purple" ? " glow" : "")
-					)
-				}>
+			<button onClick={() => setAddLight("light")}>
 				want a light extra?
 			</button>
 		</div>

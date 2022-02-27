@@ -33,8 +33,10 @@ const Lights = () => {
 			</div>
 			<br></br>
 			<br></br>
-			<button onClick={() => setAddLight("light")}>
-				want a light extra?
+			<button
+				class="btn btn-outline-primary"
+				onClick={() => setAddLight("light")}>
+				Want another light?
 			</button>
 		</div>
 	);
